@@ -11,88 +11,40 @@
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
+                    </picture>
+                </a>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section">
-            <div class="container">
-                <h2>Section Slider</h2>
-
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!--<div class="swiper-scrollbar"></div>-->
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Pictures</h2>
+        <div class="section section-main">
+            <div class="section-bg">
                 <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
+                    <source media="(min-width: 768px)" srcset="<%= require('./img/background_lg.png') %>">
+
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/background_sm.png') %>" alt="" title="">
                 </picture>
-
-                <svg>
-                    <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                </svg>
             </div>
-        </div>
 
-        <div class="section">
             <div class="container">
-                <h2>Section Range slider</h2>
+                <div class="main-content">
+                    <picture class="main-content__pic">
+                        <source media="(min-width: 768px)" srcset="<%= require('./img/aviator_lg.png') %>">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/aviator_sm.png') %>" alt="" title="">
+                    </picture>
 
-                <div class="slider-range"><input type="range" value="75" min="1" max="100"></div>
-                <div class="slider-range"><input type="range" value="275" max="1000"></div>
-                <div class="slider-range"><input type="range"></div>
+                    <p class="main-content__text">Get <span class="text-uppercase">Exclusive Bonus</span> up to 1.3 LAKH!</p>
 
-                <br>
-
-                <div class="slider-handles"><input type="range" min="2000" max="10000"></div>
-                <div class="slider-handles"><input type="range" max="1000"></div>
-                <div class="slider-handles"><input type="range"></div>
+                    <button type="button" class="btn" data-toggle="modal" data-target="#registration">Play Now</button>
+                </div>
             </div>
         </div>
     </main>
@@ -100,18 +52,97 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+
         </div>
     </footer>
     <!-- FOOTER END -->
 </div>
 
-<div class="preload-wrapper">
-    <div class="icon-load">
-        <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
+<div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="registrationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content reg-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            <div class="registration">
+                <p class="registration__title">Register and<br><span class="registration__title-text">get 4x deposit bonus now!</span></p>
+
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1">Phone</a></li>
+                        <li><a href="#tabs-2">Email</a></li>
+                    </ul>
+
+                    <div id="tabs-1">
+                        <form action="" method="POST" class="form form-phone">
+                            <label class="form-group">
+                                <input type="tel" id="phone" class="form-control" placeholder=" ">
+                                <input type="button" class="form-input-button btn btn-primary" value="send sms">
+                            </label>
+
+                            <label class="form-group">
+                                <input type="number" class="form-control" placeholder=" ">
+                                <span class="form-label">Confirmation code</span>
+                                <input type="button" class="form-input-button btn btn-primary" value="confirm">
+                            </label>
+
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+                    </div>
+
+                    <div id="tabs-2">
+                        <form action="" method="POST" class="form form-email">
+                            <div class="row">
+                                <div class="col-lg-6 m-lg-0 mb-4">
+                                    <fieldset>
+                                        <label class="form-group">
+                                            <input type="email" class="form-control" placeholder=" ">
+                                            <span class="form-label">Email</span>
+                                        </label>
+
+                                        <label class="form-group">
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="form-label">First name</span>
+                                        </label>
+
+                                        <label class="form-group">
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="form-label">Surname</span>
+                                        </label>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <fieldset>
+                                        <label class="form-group">
+                                            <button type="button" class="form-button-pass">
+                                                <svg>
+                                                    <use xlink:href="img/spritemap.svg#sprite-pass-visible"></use>
+                                                </svg>
+                                            </button>
+                                            <input type="password" class="form-control" placeholder=" ">
+                                            <span class="form-label">Password</span>
+                                        </label>
+                                        <label class="form-group">
+                                            <input type="password" class="form-control" placeholder=" ">
+                                            <span class="form-label">Re-enter your password</span>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Register</button>
+
+                            <!--<button type="submit" class="form-submit btn-style"><span>Register & Claim</span></button>-->
+                        </form>
+                    </div>
+                </div>
+
+                <p class="registration__text">By clicking this button you confirm that you have read and agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a> of the company and confirm that you are of legal age</p>
+            </div>
+        </div>
     </div>
 </div>
-<!-- BODY END   -->
+<!-- BODY END -->
 </body>
 </html>

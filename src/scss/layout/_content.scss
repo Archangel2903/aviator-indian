@@ -10,6 +10,29 @@
   min-width: 320px;
 }
 
-.main-slider {
+.main-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 145px 0;
 
+  &__pic {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: #ffffff;
+    font-family: $font-family-unique;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 11px #DC3224;
+    filter: drop-shadow(0 0 22px #DC3224);
+  }
 }

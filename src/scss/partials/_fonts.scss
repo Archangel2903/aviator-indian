@@ -1,2 +1,57 @@
 $fonts-path: '../fonts/';
 
+@font-face {
+  font-family: 'Commerce Condensed SSi';
+  src: url('#{$fonts-path}Commerce Condensed SSi Semi Bold Condensed.eot');
+  src: url('#{$fonts-path}Commerce Condensed SSi Semi Bold Condensed.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Commerce Condensed SSi Semi Bold Condensed.woff2') format('woff2'),
+  url('#{$fonts-path}Commerce Condensed SSi Semi Bold Condensed.woff') format('woff'),
+  url('#{$fonts-path}Commerce Condensed SSi Semi Bold Condensed.ttf') format('truetype'),
+  url('#{$fonts-path}Commerce Condensed SSi Semi Bold Condensed.svg#Commerce Condensed SSi Semi Bold Condensed') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('#{$fonts-path}Montserrat Black.eot');
+  src: url('#{$fonts-path}Montserrat Black.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Black.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Black.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Black.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Black.svg#Montserrat Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('#{$fonts-path}Montserrat Bold.eot');
+  src: url('#{$fonts-path}Montserrat Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Bold.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Bold.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Bold.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Bold.svg#Montserrat Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('#{$fonts-path}Montserrat Regular.eot');
+  src: url('#{$fonts-path}Montserrat Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Regular.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Regular.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Regular.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Regular.svg#Montserrat Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}

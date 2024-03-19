@@ -4,8 +4,21 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   min-width: 320px;
   width: 100%;
   z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-top: 20px;
+
+  .logo {}
 }
