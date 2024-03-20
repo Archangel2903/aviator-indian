@@ -16,7 +16,11 @@
 }
 
 .section-main {
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 100px 0 50px;
 }
 .main-content {
   display: flex;
@@ -25,7 +29,6 @@
   align-content: center;
   align-items: center;
   gap: 30px;
-  padding: 145px 0;
 
   &__pic {
     img {

@@ -155,7 +155,7 @@ form {
       justify-content: center;
       align-content: center;
       align-items: center;
-      gap: 32px;
+      gap: 20px;
 
       fieldset {
         display: flex;
@@ -163,7 +163,7 @@ form {
         justify-content: flex-start;
         align-content: stretch;
         align-items: stretch;
-        gap: 32px;
+        gap: 20px;
       }
     }
 
@@ -467,7 +467,7 @@ form {
     }
   }
   &-content {
-    padding: 48px 15px;
+    padding: 25px 15px;
     background: var(--dark-bg);
     border: 1px solid #40474d;
     border-radius: 24px;
@@ -501,9 +501,17 @@ form {
 }
 
 @include media-breakpoint-up(md) {
+  .modal {
+    &-content {
+      padding: 48px 15px;
+    }
+  }
+
   form {
     &.form {
       &-phone {
+        gap: 32px;
+
         .form-group {
           .btn {
             padding: 17px 16px;
@@ -512,6 +520,11 @@ form {
         .form-control {
           width: calc(100% - 110px);
           border-radius: 25px 0 0 25px;
+        }
+      }
+      &-email {
+        fieldset {
+          gap: 32px;
         }
       }
       .form-input-button {
