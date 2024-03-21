@@ -20,7 +20,6 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 100px 0 50px;
 }
 .main-content {
   display: flex;
@@ -54,7 +53,7 @@
   .main-content {
     &__pic {
       img {
-        width: 93%;
+        width: 95%;
       }
     }
   }
