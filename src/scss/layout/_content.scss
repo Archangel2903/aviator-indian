@@ -32,7 +32,9 @@
 
   &__pic {
     img {
+      display: block;
       width: 100%;
+      margin: 0 auto;
     }
   }
 
@@ -45,5 +47,15 @@
     text-align: center;
     text-shadow: 0 0 11px #DC3224;
     filter: drop-shadow(0 0 22px #DC3224);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .main-content {
+    &__pic {
+      img {
+        width: 85%;
+      }
+    }
   }
 }
