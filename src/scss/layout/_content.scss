@@ -18,43 +18,54 @@
 .section-main {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  align-items: flex-end;
+  min-height: calc(100vh - 210px);
 }
+
 .main-content {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-content: center;
   align-items: center;
   gap: 30px;
-
-  &__pic {
-    img {
-      display: block;
-      width: 100%;
-      margin: 0 auto;
-    }
-  }
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 30px 10px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, .25);
+  backdrop-filter: blur(50px);
 
   &__text {
     margin: 0;
-    color: #ffffff;
-    font-family: $font-family-unique;
-    font-size: 48px;
+    color: var(--white);
+    font-family: $font-family-custom;
+    font-size: 32px;
+    font-stretch: 5%;
     font-weight: 700;
     text-align: center;
-    text-shadow: 0 0 11px #DC3224;
-    filter: drop-shadow(0 0 22px #DC3224);
+    text-shadow: 0 0 6px $primary, 0 0 12px $primary, 0 0 23px $primary;
+  }
+
+  .btn {
+    flex: auto 0 0;
   }
 }
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(lg) {
+  .section-main {
+    min-height: 100vh;
+  }
+
   .main-content {
-    &__pic {
-      img {
-        width: 95%;
-      }
+    flex-direction: row;
+    gap: 80px;
+    max-width: 960px;
+    padding: 30px 80px;
+
+    &__text {
+      font-size: 40px;
     }
   }
 }

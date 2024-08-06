@@ -4,7 +4,7 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   min-width: 320px;
@@ -14,11 +14,42 @@ header.header {
 
 .header-content {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column wrap;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
-  padding-top: 20px;
+  gap: 20px;
 
-  .logo {}
+  .logo {
+    img {
+      max-width: 120px;
+    }
+  }
+
+  &__text {
+    font-family: $font-family-custom;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0 0 6px $primary, 0 0 12px $primary, 0 0 23px $primary;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .header-content {
+    &__text {
+      font-size: 40px;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .header-content {
+    flex-direction: row;
+
+    .logo {
+      img {
+        max-width: none;
+      }
+    }
+  }
 }

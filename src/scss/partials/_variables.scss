@@ -15,7 +15,7 @@ $input-placeholder-color: #aaa;
 
 // fonts
 $font-family-base: 'Montserrat', sans-serif;
-$font-family-custom: 'Arial', sans-serif;
+$font-family-custom: 'Bahnschrift', sans-serif;
 $font-family-unique: 'Commerce Condensed SSi', sans-serif;
 
 // font-weight
@@ -32,5 +32,23 @@ $transition-base: all .3s ease 0s;
 //Bootstrap var
 $enable-shadows: true;
 $body-color: $text-color;
-
 $primary: #DC3224;
+$grid-gutter-width: 40px;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 640px,
+        md: 768px,
+        lg: 1025px,
+        xl: 1540px,
+);
+
+$container-max-widths: ();
+
+$firstIteration: true;
+@each $breakpoint, $value in $grid-breakpoints {
+  @if not $firstIteration {
+    $container-max-widths: map-merge($container-max-widths, ($breakpoint: $value - $grid-gutter-width));
+  }
+  $firstIteration: false;
+}
